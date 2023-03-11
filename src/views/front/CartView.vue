@@ -68,18 +68,7 @@ export default {
       products: [],
       product: {},
       cart: {},
-      haveProduct: 0,
-      loadingItem: '',
-      form: {
-        user: {
-          name: '',
-          email: '',
-          tel: '',
-          address: ''
-        },
-        message: ''
-      },
-      isLoading: false
+      haveProduct: 0
     }
   },
   methods: {
