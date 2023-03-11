@@ -68,7 +68,8 @@ export default {
       products: [],
       product: {},
       cart: {},
-      haveProduct: 0
+      haveProduct: 0,
+      loadingItem: ''
     }
   },
   methods: {
