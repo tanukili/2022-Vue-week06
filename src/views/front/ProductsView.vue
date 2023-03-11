@@ -8,7 +8,8 @@
       <td>{{ product.title }}</td>
       <td><img :src="product.imageUrl" width="150" alt=""></td>
       <td>
-        <RouterLink :to="`/product/${product.id}`">商品細節</RouterLink>
+        <RouterLink :to="`/product/${product.id}`" class="btn btn-outline-primary">商品細節</RouterLink>
+        <button type="button" class="btn btn-outline-success" @click="addToCart(product.id)">加入購物車</button>
       </td>
     </tr>
     </tbody>
@@ -23,7 +24,8 @@ const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
     return {
-      products: []
+      products: [],
+      loadingItem: ''
     }
   },
   methods: {
@@ -35,6 +37,21 @@ export default {
         })
         .catch((err) => {
           alert(err.response.data.message)
+        })
+    },
+    addToCart (id, qty = 1) {
+      const data = {
+        product_id: id,
+        qty
+      }
+      this.loadingItem = id
+      this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
+        .then((res) => {
+          alert(res.data.message)
+          this.loadingItem = ''
+        })
+        .catch((err) => {
+          alert(err.data.message)
         })
     }
   },
