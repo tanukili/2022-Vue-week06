@@ -34,15 +34,15 @@ const routes = [
     children: [
       {
         path: 'login',
-        component: () => import('../views/dashboard/LoginView.vue')
+        component: () => import('../views/admin/AdminLogin.vue')
       },
       {
         path: 'orders',
-        component: () => import('../views/dashboard/OrdersView.vue')
+        component: () => import('../views/admin/AdminOrders.vue')
       },
       {
         path: 'products',
-        component: () => import('../views/dashboard/ProductsView.vue')
+        component: () => import('../views/admin/AdminProducts.vue')
       }
     ]
   }
