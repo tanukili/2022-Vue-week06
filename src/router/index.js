@@ -25,6 +25,10 @@ const routes = [
       {
         path: 'cart',
         component: () => import('../views/front/CartView.vue')
+      },
+      {
+        path: 'login',
+        component: () => import('../views/front/LoginView.vue')
       }
     ]
   },
@@ -32,10 +36,6 @@ const routes = [
     path: '/admin',
     component: () => import('../views/DashboardLayout.vue'),
     children: [
-      {
-        path: 'login',
-        component: () => import('../views/admin/AdminLogin.vue')
-      },
       {
         path: 'orders',
         component: () => import('../views/admin/AdminOrders.vue')

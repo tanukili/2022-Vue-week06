@@ -5,7 +5,7 @@
     <router-link to="/about">關於我們</router-link> |
     <router-link to="/products">產品列表</router-link> |
     <router-link to="/cart">購物車</router-link> |
-    <router-link to="/admin/login">管理者登入</router-link>
+    <router-link to="/login">登入</router-link>
   </div>
   <RouterView></RouterView>
 </template>
