@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o}from"./index-ca20bf0e.js";const c={},s={class:"text-center my-4"};function n(r,a,_,p,f,i){return t(),o("h1",s,"About page")}const d=e(c,[["render",n]]);export{d as default};
