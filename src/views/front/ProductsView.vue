@@ -1,19 +1,19 @@
 <template>
-  <div>
-    前台產品列表
+  <div class="my-5 row justify-content-center">
+    <h1 class="text-center mb-4">前台產品列表</h1>
+    <table class="table">
+      <tbody>
+        <tr v-for="product in products" :key="product.id">
+          <td>{{ product.title }}</td>
+          <td><img :src="product.imageUrl" width="150" alt=""></td>
+          <td>
+            <RouterLink :to="`/product/${product.id}`" class="btn btn-outline-primary">商品細節</RouterLink>
+            <button type="button" class="btn btn-outline-success" @click="addToCart(product.id)">加入購物車</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <table class="table">
-    <tbody>
-      <tr v-for="product in products" :key="product.id">
-      <td>{{ product.title }}</td>
-      <td><img :src="product.imageUrl" width="150" alt=""></td>
-      <td>
-        <RouterLink :to="`/product/${product.id}`" class="btn btn-outline-primary">商品細節</RouterLink>
-        <button type="button" class="btn btn-outline-success" @click="addToCart(product.id)">加入購物車</button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
 </template>
 
 <script>

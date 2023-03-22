@@ -1,10 +1,10 @@
 <template>
-  <div>
-    後台頁面
-    <router-link to="/admin/products">產品列表</router-link> |
-    <router-link to="/admin/orders">訂單列表</router-link> |
-    <router-link to="/">返回前台</router-link> |
-    <a href="#" @click.prevent="logout">登出</a>
+  <h4 class="text-center">後台頁面</h4>
+  <div class="d-flex justify-content-center">
+    <router-link to="/admin/products" class="px-1">產品列表</router-link> |
+    <router-link to="/admin/orders" class="px-1">訂單列表</router-link> |
+    <router-link to="/" class="px-1">返回前台</router-link> |
+    <a href="#" @click.prevent="logout" class="px-1">登出</a>
   </div>
   <RouterView></RouterView>
 </template>

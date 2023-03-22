@@ -1,9 +1,5 @@
 <template>
-  <div class="home">
-    <h1>This is Home Page.</h1>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+    <h1 class="text-center my-4">Home Page</h1>
 </template>
 
 <script>

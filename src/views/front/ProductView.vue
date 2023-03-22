@@ -1,7 +1,7 @@
 <template>
-  <div>
-    前台單一商品
-    <h2>{{ product.title }}</h2>
+  <div class="my-5 row justify-content-center">
+    <h1 class="text-center mb-4">前台單一商品</h1>
+    <h3>{{ product.title }}</h3>
     <img :src="product.imageUrl" class="img-fluid" alt="">
   </div>
 </template>
